@@ -1,20 +1,33 @@
 package com.example.superherov4.Models;
 
 public class Superhero {
-    String HeroHero;
-    String PrivateName;
-    int CreationYear;
-    private int HeroId;
 
-    public Superhero(String heroHero, String privateName, int creationYear,int heroId) {
-        HeroHero = heroHero;
+    private int HeroId;
+    private String HeroName;
+    private String PrivateName;
+    private int CreationYear;
+    private int CityID;
+
+    public Superhero(String heroName, String privateName, int creationYear) {
+        HeroName = heroName;
         PrivateName = privateName;
         CreationYear = creationYear;
-        HeroId = heroId;
     }
 
-    public String HeroHero() {
-        return HeroHero;
+    public Superhero(int heroId, String heroName, String privateName, int creationYear, int cityID) {
+        HeroId = heroId;
+        HeroName = heroName;
+        PrivateName = privateName;
+        CreationYear = creationYear;
+        CityID = cityID;
+    }
+
+    public int HeroId() {
+        return HeroId;
+    }
+
+    public String HeroName() {
+        return HeroName;
     }
 
     public String PrivateName() {
@@ -25,27 +38,7 @@ public class Superhero {
         return CreationYear;
     }
 
-    public int HeroId() {
-        return HeroId;
-    }
-
-    public Superhero setHeroHero(String heroHero) {
-        HeroHero = heroHero;
-        return this;
-    }
-
-    public Superhero setPrivateName(String privateName) {
-        PrivateName = privateName;
-        return this;
-    }
-
-    public Superhero setCreationYear(int creationYear) {
-        CreationYear = creationYear;
-        return this;
-    }
-
-    public Superhero setHeroId(int heroId) {
-        HeroId = heroId;
-        return this;
+    public int CityID() {
+        return CityID;
     }
 }
