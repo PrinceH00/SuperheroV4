@@ -24,7 +24,7 @@ public class Mycontroller {
 
     @GetMapping()
     public ResponseEntity<List<Superhero>> allHeros(){
-        List<Superhero> superheroList = repository.allheros();
+        List<Superhero> superheroList = repository.allHeros();
         return new ResponseEntity<>(superheroList, HttpStatus.OK);
     }
 
@@ -64,8 +64,8 @@ public class Mycontroller {
         return new ResponseEntity<>(allHeroesInCity,HttpStatus.OK);
     }
     @GetMapping("/city/{navn}")
-    public ResponseEntity<City> herosInThisCity(){
-        City city = repository.herosInThisCity();
+    public ResponseEntity<City> herosInThisCity(@PathVariable String name){
+        City city = repository.herosInThisCity(name);
         return new ResponseEntity<>(city, HttpStatus.OK);
     }
 }

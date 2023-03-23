@@ -5,16 +5,16 @@ public class Superhero {
     private int HeroId;
     private String HeroName;
     private String PrivateName;
-    private int CreationYear;
+    private String CreationYear;
     private int CityID;
 
-    public Superhero(String heroName, String privateName, int creationYear) {
+    public Superhero(String heroName, String privateName, String creationYear) {
         HeroName = heroName;
         PrivateName = privateName;
         CreationYear = creationYear;
     }
 
-    public Superhero(int heroId, String heroName, String privateName, int creationYear, int cityID) {
+    public Superhero(int heroId, String heroName, String privateName, String creationYear, int cityID) {
         HeroId = heroId;
         HeroName = heroName;
         PrivateName = privateName;
@@ -34,7 +34,7 @@ public class Superhero {
         return PrivateName;
     }
 
-    public int CreationYear() {
+    public String CreationYear() {
         return CreationYear;
     }
 
